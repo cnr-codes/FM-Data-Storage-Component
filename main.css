@@ -15,6 +15,16 @@ img {
   height: auto;
 }
 
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
 :root {
   font-size: 14px;
   --Pale-Blue: hsl(243, 100%, 93%);
@@ -99,7 +109,8 @@ body {
 .progressMeter--inner {
   min-height: 1rem;
   background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-  width: 75%;
+  width: 0%;
+  animation: load 1.5s 0.4s ease-in-out forwards;
   border-radius: 30px;
   display: flex;
   align-items: center;
